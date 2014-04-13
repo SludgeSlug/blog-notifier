@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "blog-notifier", "blog-notifier\blog-notifier.fsproj", "{B8A61D22-6096-4DB1-93A8-639EC2CAEFB1}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "blog-notifier.functions", "blog-notifier.functions\blog-notifier.functions.fsproj", "{2BDBE8A6-BFFA-424A-B317-C0341ED50E19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{B8A61D22-6096-4DB1-93A8-639EC2CAEFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8A61D22-6096-4DB1-93A8-639EC2CAEFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8A61D22-6096-4DB1-93A8-639EC2CAEFB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BDBE8A6-BFFA-424A-B317-C0341ED50E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BDBE8A6-BFFA-424A-B317-C0341ED50E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BDBE8A6-BFFA-424A-B317-C0341ED50E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BDBE8A6-BFFA-424A-B317-C0341ED50E19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
