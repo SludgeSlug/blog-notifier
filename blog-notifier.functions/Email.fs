@@ -1,11 +1,23 @@
 ﻿module Email
 
+    open System
     open System.Net.Mail
     open System.Net
     open System.IO
+    open System.Globalization
     
+    let currentYear =
+        //DateTime.Now.Year
+        2013
+
+    let currentWeek =
+        let dfi = DateTimeFormatInfo.CurrentInfo
+        dfi.Calendar            
+            //.GetWeekOfYear(DateTime.Now, dfi.CalendarWeekRule, dfi.FirstDayOfWeek)
+            .GetWeekOfYear(new DateTime(2013,12, 29), dfi.CalendarWeekRule, dfi.FirstDayOfWeek)
+
     let getXmlFromBlog =
-        let url = "http://blogs.nhs.uk/choices-blog/feed/"
+        let url = sprintf "http://blogs.nhs.uk/choices-internal/%d/feed?w=%d" currentYear currentWeek
 
         let req = WebRequest.Create(url)
         req.Method <- "GET"
