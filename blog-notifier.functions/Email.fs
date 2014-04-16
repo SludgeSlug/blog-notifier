@@ -33,9 +33,9 @@
             | HttpStatusCode.NotFound ->
                 "No blog updates this week"
             | otherCode ->
-                otherCode.ToString()
+                raise webEx
         | :? WebException as webEx ->
-            webEx.Status.ToString()
+            raise webEx
 
     let sendEmail = 
         let msg = new MailMessage("blog-notifier@test.com",
