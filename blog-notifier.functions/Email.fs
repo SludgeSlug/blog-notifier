@@ -34,8 +34,6 @@
                 "No blog updates this week"
             | otherCode ->
                 raise webEx
-        | :? WebException as webEx ->
-            raise webEx
 
     let sendEmail = 
         let msg = new MailMessage("blog-notifier@test.com",
