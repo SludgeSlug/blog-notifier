@@ -6,6 +6,10 @@
     open System.IO
     open System.Globalization
     
+    let readNoUpdatesEmailHtml =
+        use sr = new StreamReader("no_updates.htm")
+        sr.ReadToEnd()
+
     let currentYear =
         DateTime.Now.Year
 
@@ -31,7 +35,7 @@
 
             match httpWebResponse.StatusCode with
             | HttpStatusCode.NotFound ->
-                "No blog updates this week"
+                readNoUpdatesEmailHtml
             | otherCode ->
                 raise webEx
 
