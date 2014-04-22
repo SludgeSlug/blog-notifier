@@ -56,8 +56,9 @@
     let sendEmail = 
         let msg = new MailMessage("blog-notifier@test.com",
                                   "blog-notifier@mailinator.com",
-                                  "Test email subject",
+                                  "NHS Choices internal blog update",
                                   getEmailBody)
+        msg.IsBodyHtml <- true
 
         let client = new SmtpClient(@"smtp.mailinator.com")
         client.DeliveryMethod <- SmtpDeliveryMethod.Network
